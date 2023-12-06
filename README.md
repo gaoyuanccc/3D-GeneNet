@@ -9,7 +9,7 @@ E-mail: 18434753515@163.com
 
 ## Installation
 Requirement:
-* python (3.x)
+* python (3.8)
 * biopython
 * numpy
 * pandas
