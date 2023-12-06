@@ -14,6 +14,7 @@ Requirement:
 * numpy
 * pandas
 * scipy
+* matplotlib
 
 Notes:
 You may alternatively install using the following `conda` commands shown below, which are derived from our built environment file `environment.yaml`.
