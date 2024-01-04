@@ -87,7 +87,7 @@ def main():
             #识别CID
             print('-' * 30 + '\n' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) + '\n' + 'Identify CIDs' + '\n')
             os.chdir(args.input_file_path)
-            CID_boundary, CIDs_corrected, bin_interaction_preference_paired,gene_cid = identify_cid(args.cid_interaction_file,gene_location,args.resolution)
+            CID_boundary, CIDs_corrected, bin_interaction_preference_paired,gene_cid = identify_cid(args.cid_interaction_file,gene_location,args.resolution_cid)
 
             #输出文件
             print('-' * 30 + '\n' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) + '\n' + 'Output files' + '\n')
