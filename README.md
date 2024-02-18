@@ -81,7 +81,7 @@ Time:    89.31265020370483s
  The SRR3180951 sample of *Vibrio cholerae*  was taken is an example to demonstrate the complete function.
  ````
  #Run 3D-GeneNet
-python 3D-GeneNet.py -i "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\input\vibrio_cholerae" -p 1 -gbc vibrio_cholerae_1.gb/vibrio_cholerae_2.gb -if SRR3180951_1000_iced.matrix -ic SRR3180951_10000_iced.matrix -o "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\output\vibrio_cholerae" -r 1000 -rc 10000 -n 1000 -q 99.5
+python 3D-GeneNet.py -i "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\input\vibrio_cholerae" -p 1 -gbc vibrio_cholerae_1.gb/vibrio_cholerae_2.gb -if SRR3180951_1000_iced.matrix -ic SRR3180951_10000_iced.matrix -o "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\output\vibrio_cholerae" -r 1000 -rc 10000 -n 1000 -q 99 
 ------------------------------
 2023-12-05 22:24:30
 Run 3D-GeneNet
