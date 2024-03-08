@@ -167,7 +167,8 @@ This command inputs the contact matrix file that converts the interaction freque
  6. -p --multichromosome -gbc --multichromosomeGenbank
  If the strain is multi-chromosome, set -p 1. Genbank filenames for chromosomes are entered in order after -gbc, separated by a '/'.
 
-# Note: When using 3D-GeneNet for identifying CIDs, it may sometimes be necessary to merge the CIDs at the end of the chromosome with those at the beginning. 
+# Note
+When using 3D-GeneNet for identifying CIDs, it may sometimes be necessary to merge the CIDs at the end of the chromosome with those at the beginning. 
 
  
 
