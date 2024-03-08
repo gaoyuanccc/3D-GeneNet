@@ -150,7 +150,7 @@ DEFINITION  Escherichia coli str. K-12 substr. MG1655, complete genome.
                      /translation="MKRISTTITTTITITTGNGAG"
 ````
  4.  -im interaction_file -r resolution
-This command inputs the contact matrix file that converts the interaction frequency is three column data. The resolution is this matrix resolution, 1000 is recommended.	
+This command inputs the contact matrix file that converts the interaction frequency is three column data. The resolution is this matrix resolution, 1000 is recommended.	 
 	**Three columns format**
 	The data consists of three columns: the first column is the serial number of the first bin, the second column is the serial number of the second bin, and the third column is the interaction frequency of the two bins.
         ``````
@@ -166,6 +166,8 @@ This command inputs the contact matrix file that converts the interaction freque
  If you need to identify CIDs, provide the contact matrix in the same format as the above interaction_file; 10000 is the suggested resolution. If you do not need to identify CIDs, enter the command `-ic None`.
  6. -p --multichromosome -gbc --multichromosomeGenbank
  If the strain is multi-chromosome, set -p 1. Genbank filenames for chromosomes are entered in order after -gbc, separated by a '/'.
+
+# Note: When using 3D-GeneNet for identifying CIDs, it may sometimes be necessary to merge the CIDs at the end of the chromosome with those at the beginning. 
 
  
 
