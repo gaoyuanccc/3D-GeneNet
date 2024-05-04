@@ -119,10 +119,16 @@ def multi_identify_cid_1(chr_length,cid_resolution,bin_begin_number,interaction_
         current_bin_index += 1
 
 
-    # 修正最后一个CID的结束bin为第一个CID的开始bin序号-2
-    CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
-    CID_boundary.pop(-1)
-    CID_boundary.insert(0,CIDs_corrected[0][0]-1)
+    if bins_significant_signed[0] > 0 and bins_significant_signed[-1] > 0:
+        CIDs_corrected[0] = (CIDs_corrected[-1][0], CIDs_corrected[0][1])
+        CIDs_corrected.pop(-1)
+        CID_boundary.pop(-1)
+
+    else:
+        # 修正最后一个CID的结束bin为第一个CID的开始bin序号-2
+        CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
+        CID_boundary.pop(-1)
+        CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
 
     # 创建一个字典，键为CID的索引（从1开始），值为对应的bin范围
     CID_range = {}
@@ -273,10 +279,16 @@ def multi_identify_cid_after(chr_length, cid_resolution, bin_begin_number,intera
         # 移动到下一个bin
         current_bin_index += 1
 
-    # 修正最后一个CID的结束bin为第一个CID的开始bin序号-2
-    CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
-    CID_boundary.pop(-1)
-    CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
+    if bins_significant_signed[0] > 0 and bins_significant_signed[-1] > 0:
+        CIDs_corrected[0] = (CIDs_corrected[-1][0], CIDs_corrected[0][1])
+        CIDs_corrected.pop(-1)
+        CID_boundary.pop(-1)
+
+    else:
+        # 修正最后一个CID的结束bin为第一个CID的开始bin序号-2
+        CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
+        CID_boundary.pop(-1)
+        CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
 
     # 创建一个字典，键为CID的索引（从1开始），值为对应的bin范围
     CID_range = {}
