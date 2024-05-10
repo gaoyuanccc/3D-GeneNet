@@ -130,6 +130,10 @@ def multi_identify_cid_1(chr_length,cid_resolution,bin_begin_number,interaction_
         CID_boundary.pop(-1)
         CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
 
+    if CIDs_corrected[-1][-1] == -1:
+        CIDs_corrected[-1] = (CIDs_corrected[-1][0], len(bin_interaction_preference_paired)-1)
+        CID_boundary[0] = len(bin_interaction_preference_paired)
+
     # 创建一个字典，键为CID的索引（从1开始），值为对应的bin范围
     CID_range = {}
     for i in range(len(CIDs_corrected)):
@@ -289,6 +293,10 @@ def multi_identify_cid_after(chr_length, cid_resolution, bin_begin_number,intera
         CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
         CID_boundary.pop(-1)
         CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
+
+    if CIDs_corrected[-1][-1] == -1:
+        CIDs_corrected[-1] = (CIDs_corrected[-1][0], len(bin_interaction_preference_paired)-1)
+        CID_boundary[0] = len(bin_interaction_preference_paired)
 
     # 创建一个字典，键为CID的索引（从1开始），值为对应的bin范围
     CID_range = {}
