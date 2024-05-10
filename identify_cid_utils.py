@@ -110,6 +110,7 @@ def identify_cid(cid_interaction_file,gene_location,resolution):
         CIDs_corrected[-1] = (CIDs_corrected[-1][0], CIDs_corrected[0][0] - 2)
         CID_boundary.pop(-1)
         CID_boundary.insert(0, CIDs_corrected[0][0] - 1)
+    
 
     # 创建一个字典，键为CID的索引（从1开始），值为对应的bin范围
     CID_range = {}
