@@ -3,6 +3,7 @@ import argparse
 import os
 import time
 import sys
+from topology_identification import process_interaction_gene_pairs
 from genbank_utils import read_genbank_file
 from interaction_utils import read_interaction_matrix, calculate_gene_interaction,remove_distance_filter,sort_and_combine_dicts
 from identify_significant_interactions_utils import identify_significant_interactions,remove_distance_def
@@ -138,6 +139,8 @@ def main():
         significant_gene_pairs = multi_identify_significant_interactions(args.n_bootstrap, args.quantile_threshold,
                                                                    gene_interaction_distance_intra_asc, args.seed)
         select_gene_pairs = multi_remove_distance(significant_gene_pairs, args.remove_distance)
+        total_gene_pairs = process_interaction_gene_pairs(select_gene_pairs)
+
 
 
         # 设置您的文件夹路径
@@ -152,7 +155,7 @@ def main():
         if  args.cid_interaction_file == None:
             print('-' * 30 + '\n' + time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()) + '\n' + 'Output files' + '\n')
             # 保存基因对文件
-            save_dataframe_to_file(select_gene_pairs, 'gene_association_network.csv')
+            save_dataframe_to_file(total_gene_pairs, 'gene_association_network.csv')
 
         else:
             print(
@@ -202,7 +205,9 @@ def main():
                     multi_plot_cid_interaction_file(bin_interaction_preference_paired, CID_boundary,
                                                     "chr" + str(chr_length + 1) + "_bin_preference.pdf")
 
-            multi_save_dataframe_to_file(select_gene_pairs, 'gene_association_network.csv')
+            total_gene_pairs = process_interaction_gene_pairs(select_gene_pairs)
+
+            multi_save_dataframe_to_file(total_gene_pairs, 'gene_association_network.csv')
 
 
 
