@@ -58,7 +58,7 @@ def process_interaction_gene_pairs(interaction_gene_pairs):
     interaction_gene_pairs['interaction_normalized'] = scaled_values[:, 0]  # 新列存放Indicator1的标准化数据
     # endregion
 
-    interaction_gene_pairs['total'] = (1 - interaction_gene_pairs['betweenness_centrality_sum_normalized']) * 0.3 + (
+    interaction_gene_pairs['SSC score'] = (1 - interaction_gene_pairs['betweenness_centrality_sum_normalized']) * 0.3 + (
                 1 - interaction_gene_pairs['degree_centrality_sum_normalized']) * 0.3 + interaction_gene_pairs[
                                           'interaction_normalized'] * 0.4
 
