@@ -4,7 +4,7 @@ Constructing gene association networks using chromosomal conformational capture 
 E-mail: 18434753515@163.com
 ## Introduction
 
-3D-GeneNet is a tool for constructing gene association networks that use the chromosomal conformational capture data to estimate the spatial interaction frequency between genes and identify chromosomal interaction regions (CIDs). With normalized or unnormalized IF matrices and bacterial genome-wide Genbank annotation files as inputs, the software will construct the gene/protein interaction network, identify the CIDs, and export the network as a file.
+3D-GeneNet is a tool for constructing gene association networks that use the chromosomal conformational capture data to estimate the spatial interaction frequency between genes and identify chromosomal interaction regions (CIDs). With normalized or unnormalized IF matrices and bacterial genome-wide Genbank annotation files as inputs, the software will construct the gene/protein interaction network, identify the CIDs, and export the network as a file. 
 
 
 ## Installation
@@ -15,7 +15,7 @@ Requirement:
 * pandas
 * scipy
 * networkx
-* sklearn
+* scikit-learn 
 
 Notes:
 You may alternatively install using the following `conda` commands shown below, which are derived from our built environment file `environment.yaml`.
