@@ -1,4 +1,4 @@
-name: 3D-GeneNet
+name: 3d-genenet
 channels:
   - anaconda
   - defaults
@@ -83,4 +83,9 @@ dependencies:
   - zipp=3.11.0=py38h06a4308_0
   - zlib=1.2.13=h5eee18b_0
   - zstd=1.5.5=hc292b87_0
-prefix: /home/gaoyuan/anaconda3/envs/3D-GeneNet
+  - pip:
+      - joblib==1.4.2
+      - networkx==3.1
+      - scikit-learn==1.3.2
+      - threadpoolctl==3.5.0
+prefix: /home/gaoyuan/anaconda3/envs/3d-genenet
