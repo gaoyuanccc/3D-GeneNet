@@ -14,6 +14,8 @@ Requirement:
 * numpy
 * pandas
 * scipy
+* networkx
+* sklearn
 
 Notes:
 You may alternatively install using the following `conda` commands shown below, which are derived from our built environment file `environment.yaml`.
@@ -49,38 +51,38 @@ You may alternatively install using the following `conda` commands shown below, 
 #### For example
 
  - Single-chromosome
-The GSM2870409 sample of *Escherichia coli* K-12 MG1655 was taken is an example to demonstrate the complete function.
+The GSM2870409 sample of *Streptococcus suis* SC19 was taken is an example to demonstrate the complete function.
 ````
 # Run 3D-GeneNet
-python 3D-GeneNet.py -i "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\input\ecoli" -gb U00096.3.gb -if rawdata_1000_iced.matrix -ic rawdata_10000_iced.matrix -o "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\output\ecoli" -r 1000 -rc 10000 -q 99.5
+python 3D-GeneNet.py -i "path\input\sc19" -gb sc19.gb -if SC19_1000_iced.matrix -ic SC19_10000_iced.matrix -o "path\output\sc19" -r 1000 -rc 10000 -q 99.5
 ------------------------------
-2024-05-08 15:50:55
+2024-05-22 11:42:33
 Run 3D-GeneNet
 
 ------------------------------
-2024-05-08 15:50:55
+2024-05-22 11:42:33
 Convert interaction frequency
 
 ------------------------------
-2024-05-08 15:51:52
+2024-05-22 11:42:54
 Select gene pairs
 
 ------------------------------
-2024-05-08 16:44:55
+2024-05-22 12:17:09
 Identify CIDs
 
 ------------------------------
-2024-05-08 16:44:58
+2024-05-22 12:17:10
 Output files
 
-Time:    3247.2316389083862s
+Time:    2078.305317878723s
 ````
 
  - Multi-chromosome
  The SRR3180951 sample of *Vibrio cholerae*  was taken is an example to demonstrate the complete function.
  ````
  #Run 3D-GeneNet
-python 3D-GeneNet.py -i "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\input\vibrio_cholerae" -p 1 -gbc vibrio_cholerae_1.gb/vibrio_cholerae_2.gb -if SRR3180951_1000_iced.matrix -ic SRR3180951_10000_iced.matrix -o "D:\Data\Project\3D-GeneNet\software_CLI\3D-GeneNet\output\vibrio_cholerae" -r 1000 -rc 10000 -q 99.5
+python 3D-GeneNet.py -i "path\input\vibrio_cholerae" -p 1 -gbc vibrio_cholerae_1.gb/vibrio_cholerae_2.gb -if SRR3180951_1000_iced.matrix -ic SRR3180951_10000_iced.matrix -o "path\vibrio_cholerae" -r 1000 -rc 10000 -q 99.5
 ------------------------------
 2024-05-08 17:10:40
 Run 3D-GeneNet
