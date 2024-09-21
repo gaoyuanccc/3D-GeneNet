@@ -86,6 +86,7 @@ def main():
         os.chdir(args.outfile_path)
         if  args.cid_interaction_file == None:
             # 保存基因对文件
+            total_gene_pairs = process_interaction_gene_pairs(select_gene_pairs)
             save_dataframe_to_file(select_gene_pairs, 'gene_association_network.csv')
         else:
             #识别CID
@@ -106,6 +107,7 @@ def main():
             save_dict_to_file(bin_interaction_preference_paired,'cid_t_pvalue.csv')
 
             #保存基因对文件
+            total_gene_pairs = process_interaction_gene_pairs(select_gene_pairs)
             save_dataframe_to_file(select_gene_pairs,'gene_association_network.csv')
 
             plot_cid_interaction_file(bin_interaction_preference_paired,CID_boundary,"cid_bin_preference.pdf")
